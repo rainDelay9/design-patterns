@@ -29,22 +29,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acdcfff6-2be9-4a4a-a761-530c7bf1753f" name="Default Changelist" comment="remove redundant files">
-      <change afterPath="$PROJECT_DIR$/CityDuck.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CityDuck.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Duck.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FancyFlyingBehavior.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FancyFlyingBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFlyBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IQuackBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NoFlyingBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NoQuackBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleFlyingBehavior.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleFlyingBehavior.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleQuackBehavior.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SimpleQuackBehavior.h" afterDir="false" />
+    <list default="true" id="acdcfff6-2be9-4a4a-a761-530c7bf1753f" name="Default Changelist" comment="adding strategy patterns (ducks)">
+      <change afterPath="$PROJECT_DIR$/CountryDuck.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FreeFlyingBehavior.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CityDuck.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594673104822</updated>
-      <workItem from="1594673109630" duration="3165000" />
+      <workItem from="1594673109630" duration="4319000" />
     </task>
     <task id="LOCAL-00001" summary="Adding .gitignore">
       <created>1594673250429</created>
@@ -112,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594758985554</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding strategy patterns (ducks)">
+      <created>1594761632306</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594761632306</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,32 +130,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Adding .gitignore" />
     <MESSAGE value="remove redundant files" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove redundant files" />
+    <MESSAGE value="adding strategy patterns (ducks)" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding strategy patterns (ducks)" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1594761156219">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom" timestamp="1594761562063">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.bottom/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761156219" />
-    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1594761156218">
+    <state width="2518" height="409" key="GridCell.Tab.0.bottom/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761562063" />
+    <state width="2518" height="409" key="GridCell.Tab.0.center" timestamp="1594761562061">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.center/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761156218" />
-    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1594761156217">
+    <state width="2518" height="409" key="GridCell.Tab.0.center/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761562061" />
+    <state width="2518" height="409" key="GridCell.Tab.0.left" timestamp="1594761562061">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.left/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761156217" />
-    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1594761156219">
+    <state width="2518" height="409" key="GridCell.Tab.0.left/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761562061" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right" timestamp="1594761562062">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state width="2518" height="409" key="GridCell.Tab.0.right/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761156219" />
+    <state width="2518" height="409" key="GridCell.Tab.0.right/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761562062" />
     <state x="1040" y="459" key="RollbackChangesDialog" timestamp="1594759069086">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1040" y="459" key="RollbackChangesDialog/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594759069086" />
-    <state x="880" y="471" key="Vcs.Push.Dialog.v2" timestamp="1594758989962">
+    <state x="880" y="471" key="Vcs.Push.Dialog.v2" timestamp="1594761633452">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="880" y="471" key="Vcs.Push.Dialog.v2/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594758989962" />
+    <state x="880" y="471" key="Vcs.Push.Dialog.v2/-1920.208.1920.1057/0.23.2560.1417@0.23.2560.1417" timestamp="1594761633452" />
   </component>
 </project>
