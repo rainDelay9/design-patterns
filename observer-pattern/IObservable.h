@@ -1,0 +1,19 @@
+//
+// Created by Matan on 7/16/20.
+//
+
+#ifndef OBSERVER_PATTERN_IOBSERVABLE_H
+#define OBSERVER_PATTERN_IOBSERVABLE_H
+
+#include "IObserver.h"
+
+template<typename T>
+class IObservable {
+public:
+    virtual void add(std::shared_ptr<IObserver<T>> observer) = 0;
+    virtual void remove(std::shared_ptr<IObserver<T>> observer) = 0;
+private:
+    virtual void notify() = 0;
+};
+
+#endif //OBSERVER_PATTERN_IOBSERVABLE_H

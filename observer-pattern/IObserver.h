@@ -1,0 +1,16 @@
+//
+// Created by Matan on 7/15/20.
+//
+
+#ifndef OBSERVER_PATTERN_IOBSERVER_H
+#define OBSERVER_PATTERN_IOBSERVER_H
+
+#include <memory>
+
+template <typename T>
+class IObserver {
+public:
+    virtual void update(T val) = 0;
+};
+
+#endif //OBSERVER_PATTERN_IOBSERVER_H
