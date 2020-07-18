@@ -7,11 +7,11 @@
 
 #include "IObserver.h"
 
-/**
- * This implementation is rather poor. In a real-world scenario it would probably be best
- * if the observer holds a weak_ptr to the observable, and observable->remove is called
- * in the observer destructor
- */
+
+//This implementation is rather poor. In a real-world scenario it would probably be best
+//if the observer holds a weak_ptr to the observable, and observable->remove is called
+//in the observer destructor.
+
 
 class WeatherStation1 : public IObserver<double> {
 public:

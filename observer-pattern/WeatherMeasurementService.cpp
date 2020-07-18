@@ -5,14 +5,19 @@
 #include <iostream>
 #include "WeatherMeasurementService.h"
 
-void WeatherMeasurementService::add(std::shared_ptr<IObserver<double>> observer) {
+void WeatherMeasurementService::add(std::weak_ptr<IObserver<double>> observer) {
     std::cout << "ADDING WEATHER STATION" << std::endl;
-    this->observers.insert(observer);
-    observer->update(this->temperature);
+    if(auto shared = observer.lock()){
+        this->observers.push_back(observer);
+        shared->update(this->temperature);
+    }
 }
-void WeatherMeasurementService::remove(std::shared_ptr<IObserver<double>> observer) {
+void WeatherMeasurementService::remove(std::weak_ptr<IObserver<double>> observer) {
     std::cout << "REMOVING WEATHER STATION" << std::endl;
-    this->observers.erase(this->observers.find(observer));
+    this->observers.erase(std::find_if(this->observers.begin(), this->observers.end(),
+            [observer](std::weak_ptr<IObserver<double>> ptr) {
+        return observer.lock() == ptr.lock();
+    }));
 };
 
 void WeatherMeasurementService::addTemp(double delta){
@@ -26,7 +31,12 @@ void WeatherMeasurementService::change(double _temperature){
 }
 
 void WeatherMeasurementService::notify() {
+    std::vector<std::weak_ptr<IObserver<double>>> toRemove;
     for(auto observer : this->observers){
-        observer->update(this->temperature);
+        if(auto obs = observer.lock()) {
+            obs->update(this->temperature);
+        } else {
+            toRemove.push_back(observer);
+        }
     }
 };

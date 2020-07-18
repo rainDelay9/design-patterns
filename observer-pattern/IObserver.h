@@ -5,8 +5,6 @@
 #ifndef OBSERVER_PATTERN_IOBSERVER_H
 #define OBSERVER_PATTERN_IOBSERVER_H
 
-#include <memory>
-
 template <typename T>
 class IObserver {
 public:

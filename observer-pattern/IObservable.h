@@ -10,8 +10,8 @@
 template<typename T>
 class IObservable {
 public:
-    virtual void add(std::shared_ptr<IObserver<T>> observer) = 0;
-    virtual void remove(std::shared_ptr<IObserver<T>> observer) = 0;
+    virtual void add(std::weak_ptr<IObserver<T>> observer) = 0;
+    virtual void remove(std::weak_ptr<IObserver<T>> observer) = 0;
 private:
     virtual void notify() = 0;
 };
