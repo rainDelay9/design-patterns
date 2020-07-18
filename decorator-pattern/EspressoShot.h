@@ -10,7 +10,7 @@
 
 class EspressoShot : public BeverageDecorator {
 public:
-    EspressoShot(std::shared_ptr<Beverage> bev) : BeverageDecorator(bev) {}
+    EspressoShot(std::unique_ptr<Beverage> bev) : BeverageDecorator(std::move(bev)) {}
 
     std::string description();
     double cost();

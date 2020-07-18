@@ -10,7 +10,7 @@
 
 class Caramel : public BeverageDecorator {
 public:
-    Caramel(std::shared_ptr<Beverage> bev) : BeverageDecorator(bev) {}
+    Caramel(std::unique_ptr<Beverage> bev) : BeverageDecorator(std::move(bev)) {}
 
     std::string description();
     double cost();

@@ -9,10 +9,10 @@
 
 class BeverageDecorator : public Beverage {
 public:
-    BeverageDecorator(std::shared_ptr<Beverage> bev): beverage(bev) {}
+    BeverageDecorator(std::unique_ptr<Beverage> bev): beverage(std::move(bev)) {}
 
 protected:
-    std::shared_ptr<Beverage> beverage;
+    std::unique_ptr<Beverage> beverage;
 };
 
 #endif //DECORATOR_PATTERN_BEVERAGEDECORATOR_H
