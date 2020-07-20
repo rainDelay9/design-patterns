@@ -7,11 +7,10 @@
 
 #include <string>
 
-class Singleton
-{
+class Singleton {
 public:
 
-    static Singleton* instance(int value);
+    static Singleton* instance(int value = 0);
 
     int get() const{
         return value;
@@ -20,20 +19,10 @@ public:
     int value;
 
 
-protected:
+private:
     Singleton(int _value): value(_value){}
 
     static Singleton* singleton;
-
 };
-
-Singleton* Singleton::singleton= nullptr;;
-
-Singleton* Singleton::instance(int value = 0) {
-    if(singleton==nullptr){
-        singleton = new Singleton(value);
-    }
-    return singleton;
-}
 
 #endif //SINGLETON_PATTERN_SINGLETON_H
