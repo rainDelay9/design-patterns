@@ -26,8 +26,6 @@ public:
 private:
     Singleton(int _value): value(_value){}
 
-
-    static std::shared_ptr<Singleton> singleton;
 };
 
 #endif //SINGLETON_PATTERN_SINGLETON_H
