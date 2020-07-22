@@ -5,6 +5,6 @@
 #include "Singleton.h"
 
 Singleton& Singleton::instance() {
-    static Singleton instance{0};
+    static Singleton instance;
     return instance;
 }

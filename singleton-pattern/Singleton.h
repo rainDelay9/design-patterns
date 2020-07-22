@@ -24,7 +24,7 @@ public:
     Singleton& operator=(Singleton&&) = delete;
 
 private:
-    Singleton(int _value): value(_value){}
+    Singleton(): value(0){}
 
 };
 
