@@ -4,11 +4,9 @@
 
 #include "Singleton.h"
 
-Singleton* Singleton::singleton= nullptr;;
+std::shared_ptr<Singleton> Singleton::singleton;
 
-Singleton* Singleton::instance(int value) {
-    if(singleton==nullptr){
-        singleton = new Singleton(value);
-    }
-    return singleton;
+Singleton& Singleton::instance(int value) {
+    static Singleton instance{value};
+    return instance;
 }

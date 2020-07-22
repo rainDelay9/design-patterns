@@ -10,7 +10,7 @@
 class Singleton {
 public:
 
-    static Singleton* instance(int value = 0);
+    static Singleton& instance(int value = 0);
 
     int get() const{
         return value;
@@ -27,7 +27,7 @@ private:
     Singleton(int _value): value(_value){}
 
 
-    static Singleton* singleton;
+    static std::shared_ptr<Singleton> singleton;
 };
 
 #endif //SINGLETON_PATTERN_SINGLETON_H
