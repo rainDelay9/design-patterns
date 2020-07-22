@@ -10,7 +10,7 @@
 class Singleton {
 public:
 
-    static Singleton& instance(int value = 0);
+    static Singleton& instance();
 
     int get() const{
         return value;

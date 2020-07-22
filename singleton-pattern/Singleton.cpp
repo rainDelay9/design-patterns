@@ -4,7 +4,7 @@
 
 #include "Singleton.h"
 
-Singleton& Singleton::instance(int value) {
-    static Singleton instance{value};
+Singleton& Singleton::instance() {
+    static Singleton instance{0};
     return instance;
 }
