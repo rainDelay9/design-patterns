@@ -18,9 +18,14 @@ public:
 
     int value;
 
+    Singleton(const Singleton&) = delete;
+    Singleton& operator=(const Singleton&) = delete;
+    Singleton(Singleton&&) = delete;
+    Singleton& operator=(Singleton&&) = delete;
 
 private:
     Singleton(int _value): value(_value){}
+
 
     static Singleton* singleton;
 };
